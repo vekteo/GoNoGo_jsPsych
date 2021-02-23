@@ -33,7 +33,7 @@ At the end of the task, a feedback about the overall accuracy is presented on th
 
 <h2>Setting options</h2>
 In the <strong>parameters.js</strong> file you have the opportunity to slightly modify the task. By setting the variable <strong>numberOfRepetitions</strong>, you can modify how many times you want to include 20 trials for the task. The default is 8 (8×20 = 160).
-
+<br>
 You can also set the language of the task by modifying the varablei <strong>language</strong>. The currently available languages are enligsh (en) and hungarian (hu).
 
 <h2>Browser requirements</h2>
