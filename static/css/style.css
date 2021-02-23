@@ -1,0 +1,35 @@
+p {
+    font-size: 1.25em;
+}
+
+img {
+    width: 800px;
+}
+
+body {
+    background-color: white
+}
+
+#stimulus {
+    font-size: 100px
+}
+
+.correct {
+    color: green;
+    font-size: 40px;
+}
+
+.wrong {
+    color: red;
+    font-size: 40px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.placeholder {
+    color: white;
+    font-size: 40px;
+}
