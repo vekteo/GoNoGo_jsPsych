@@ -65,7 +65,10 @@ const endTask = {
                     <p>${language.end.answer1}${((correctTrials/trials)*100).toFixed(0)}${language.end.answer2}</p>
                     <p>${language.end.thankYou}</p>`
         },
-    trial_duration: 5000
+    trial_duration: 5000,
+    on_finish: function (trial) {
+        statCalculation(trial);
+    }
 }
   
 const fixation = {
