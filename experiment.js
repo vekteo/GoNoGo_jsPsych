@@ -144,9 +144,9 @@ jsPsych.init({
         }
     },
     on_close: function(){
-        jsPsych.data.get().localSave("csv", "output.csv");
+        jsPsych.data.get().localSave("csv", "GNG_output_quitting.csv");
       },
     on_finish: function() {
-      jsPsych.data.get().localSave("csv", "output.csv");
+      jsPsych.data.get().localSave("csv", "GNG_output.csv");
     }
   }); 
