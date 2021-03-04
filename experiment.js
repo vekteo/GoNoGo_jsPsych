@@ -135,6 +135,13 @@ jsPsych.init({
         if(lastTrial.is_practice == 0 && lastTrial.trial_number == firstPart.timeline_variables.length*firstPart.repetitions) {
             trialNumber = 0;
         }
+
+        let interactionData = jsPsych.data.getInteractionData()
+        const interactionDataOfLastTrial = interactionData.filter({'trial': jsPsych.data.get().last(1).values()[0].trial_index}).values();
+
+        if (interactionDataOfLastTrial) {
+        jsPsych.data.get().last(1).values()[0].browser_events = JSON.stringify(interactionDataOfLastTrial)
+        }
     },
     on_close: function(){
         jsPsych.data.get().localSave("csv", "output.csv");
