@@ -14,6 +14,7 @@ let trialNumber = 0;
 const startImage = ["static/images/start.png"]
 const imagesP = ["static/images/p1.png", "static/images/p2.png", "static/images/p3.png", "static/images/p4.png"]
 const imagesR = ["static/images/r1.png", "static/images/r2.png", "static/images/r3.png", "static/images/r4.png"]
+const subjectId = jsPsych.randomization.randomID(15)
 
 /* timeline elements */
 
@@ -104,6 +105,7 @@ const practiceSecondPart = {... timelineElementStructure, timeline_variables: pr
 const firstPart = {... timelineElementStructure, timeline_variables: stimuliFirstPart, repetitions: numberOfRepetitions}
 const secondPart = {... timelineElementStructure, timeline_variables: stimuliSecondPart, repetitions: numberOfRepetitions}
 
+jsPsych.data.addProperties({subject: subjectId});
 timeline.push({type: "fullscreen", fullscreen_mode: true}, instructions, practiceStart, practiceFirstPart, taskStart, firstPart, instructionChange, practiceStart, practiceSecondPart, taskStart, secondPart, endTask, {type: "fullscreen", fullscreen_mode: false});
 
 /*************** EXPERIMENT START AND DATA UPDATE ***************/
