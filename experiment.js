@@ -12,8 +12,8 @@ Github:https://github.com/vekteo/GoNoGo_JSPsych
 let timeline = [];
 let trialNumber = 0;
 const startImage = ["static/images/start.png"]
-const imagesP = ["static/images/p1.png", "static/images/p2.png", "static/images/p3.png", "static/images/p4.png"]
-const imagesR = ["static/images/r1.png", "static/images/r2.png", "static/images/r3.png", "static/images/r4.png"]
+const imagesP = ["static/images/p1.png", "static/images/p2.png", "static/images/p3.png", "static/images/p4.png"];
+const imagesR = ["static/images/r1.png", "static/images/r2.png", "static/images/r3.png", "static/images/r4.png"];
 const subjectId = jsPsych.randomization.randomID(15)
 
 /* timeline elements */
@@ -112,7 +112,7 @@ timeline.push({type: "fullscreen", fullscreen_mode: true}, instructions, practic
 
 jsPsych.init({
     timeline: timeline,
-    preload_images: [startImage, imagesR, imagesP, "static/images/instruction_en.gif"],
+    preload_images: [startImage, imagesR, imagesP, "static/images/instruction_en.gif", "static/images/instruction_hu.gif"],
     on_data_update: function() {
         let lastTrial = jsPsych.data.get().last(1).values()[0];
         if (lastTrial.position) {
