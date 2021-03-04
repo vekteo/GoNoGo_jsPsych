@@ -5,4 +5,4 @@
 // e.g. 6 repetions will result in 6*20 = 120 trials per block, 96 Go and 24 NoGo trials
 
 const numberOfRepetitions = 8;
-const language = en; //available languages : en, hus
+const language = en; //available languages : english (en), hungarian (hu)
