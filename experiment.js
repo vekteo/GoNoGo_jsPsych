@@ -24,6 +24,7 @@ const instructions = {
         `<h1>${language.welcomePage.welcome}</h1><br><p>${language.welcomePage.clickNext}</p>`,
         `<p>${language.instruction.blueStar}</p><p>${language.instruction.PorR}</p><p>${language.instruction.pressSpace}</p><p>${language.instruction.dontPress}</p><img style="width: 720px; height:405px" src=${language.instruction.img} /><p>${language.instruction.ready}</p>`
     ],
+    data: {test_part: "instruction"},
     show_clickable_nav: true,
     button_label_next: language.button.next,
     button_label_previous: language.button.previous
@@ -31,13 +32,15 @@ const instructions = {
 
 const practiceStart = {
     type: "html-keyboard-response",
-    stimulus: `<p>${language.practice}</p>`
+    stimulus: `<p>${language.practice}</p>`,
+    data: {test_part: "practice_start"}
 };  
 
 
 const taskStart = {
     type: "html-keyboard-response",
-    stimulus: `<p>${language.task.begin}</p><br><p>${language.task.ready}</p>`
+    stimulus: `<p>${language.task.begin}</p><br><p>${language.task.ready}</p>`,
+    data: {test_part: "start_task"}
 };  
 
 const instructionChange = {
@@ -45,6 +48,7 @@ const instructionChange = {
     pages: [
     `<h2 style='color: red'>${language.instructionChange.attention}</h2><br><p>${language.instructionChange.change}</p><br><p>${language.instructionChange.pressSpace}</p><p>${language.instructionChange.dontPress}</p><img style="width: 720px; height:405px" src=${language.instructionChange.img} /><p><p>${language.instruction.ready}`
     ],
+    data: {test_part: "instruction"},
     show_clickable_nav: true,
     button_label_next: language.button.next,
     button_label_previous: language.button.previous
@@ -52,6 +56,7 @@ const instructionChange = {
 
 const endTask = {
     type: "html-keyboard-response",
+    data: {test_part: "debrief"},
     stimulus: function() {
         const trials = jsPsych.data.get().filter({is_practice: 0}).count()
         const correctTrials = jsPsych.data.get().filter({correct: 1, is_practice: 0}).count();
@@ -73,7 +78,8 @@ const fixation = {
         let message;
         let lastTrial = jsPsych.data.get().last(1).values()[0];
         lastTrial.correct == 1 ? message = "<p class='correct'>" + `${language.feedback.correct}` + "</p>" : message = "<p class='wrong'>" + `${language.feedback.wrong}` + " </p>";
-        lastTrial.is_practice == 1 ? trial.prompt = message : trial.prompt = "<p class='placeholder'>Placeholder!</p>"
+        lastTrial.is_practice == 1 ? trial.prompt = message : trial.prompt = "<p class='placeholder'>Placeholder!</p>";
+        trial.test_part = "fixation"
     }
 };
 
@@ -90,7 +96,8 @@ const trial = {
     response_ends_trial: true,
     trial_duration: 500,
     prompt: "<p class='placeholder'>Placeholder!</p>",
-    }
+    on_finish: function (data) { data.test_part = "stimulus" }
+}
   
 /*************** TIMELINE ***************/
 
