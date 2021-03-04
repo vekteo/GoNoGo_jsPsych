@@ -1,5 +1,5 @@
 # GoNoGo_JSPsych
-A Go/NoGo Task created with JSPsych, based on the implementation of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2757760/">Bezdjian et al. (2009)</a>.
+A Go/NoGo Task created with JSPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>., based on the implementation of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2757760/">Bezdjian et al. (2009)</a>.
 
 <h2>Structure of the Task</h2>
 A grid of four squares appears on the screen. A blue star appears in each squares. From time to time, a <strong>P</strong> or an <strong>R</strong> letter appears in one of the four squares. In the first part of  the task, the task is to press the <strong>space</strong> button as soon as possible, when they see the letter P (Go). When an R appears, they do not have to press any button, i.e., they have to withhold their responses (No-Go). In the second part of the task, they have to press <strong>space</strong> when they see an R, and they have to withhold their responses when they see a P.
@@ -17,7 +17,8 @@ At the end of the task, a feedback about the overall accuracy is presented on th
  <li><strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)</li>
  <li><strong>time_elapsed:</strong> the time elapsed from the start of the script in ms</li>
  <li><strong>internal_code_id:</strong> internal node id of the trial</li>
- <li><strong>view history:</strong> browser events during the task (fullscreenenter, fullscreenexit, blur or focus)</li>
+ <li><strong>browser_events:</strong> browser events during the task (fullscreenenter, fullscreenexit, blur or focus)</li>
+ <li><strong>view_history:</strong> viewing history during the instruction trials</li>
  <li><strong>rt:</strong> the reaction time for the Go or NoGo trials in ms</li>
  <li><strong>stimulus:</strong> stimulus on the screen in HTML</li>
  <li><strong>key_press:</strong> number code of the key pressed</li>
