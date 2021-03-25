@@ -3,7 +3,8 @@ p {
 }
 
 img {
-    width: 800px;
+    width: 300px;
+    height: 300px;
 }
 
 body {
@@ -22,11 +23,6 @@ body {
 .wrong {
     color: red;
     font-size: 40px;
-}
-
-img {
-    height: 300px;
-    width: 300px;
 }
 
 .placeholder {
