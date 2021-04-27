@@ -20,7 +20,7 @@ const en = {
     },
     end:  {
         end: "End of the task.",
-        thankYou: "Thank you for participating!",
+        thankYou: "Thank you!",
         answer1: "You answered correctly in ",
         answer2: "% of the trials."
     },
@@ -84,7 +84,7 @@ const hu = {
         previous: "Vissza"
     },
     fullscreen: {
-        fullscreenText: "A feladat teljes képernyőre ugrik, amint megnyomod a Tovább gombot.",
+        fullscreenText: "A feladat teljes képernyőre ugrik, amint a Tovább gombra kattintasz.",
         fullscreenButton: "Tovább"
     },
     feedback: {
@@ -115,7 +115,7 @@ const es = {
     },
     end:  {
         end: "Fin de la tarea.",
-        thankYou: "Gracias por tu participación!",
+        thankYou: "Gracias!",
         answer1: "Respondiste correctamente en ",
         answer2: "% de la prueba."
     },
@@ -162,7 +162,7 @@ const fr = {
     },
     end:  {
         end: "Fin de la tâche.",
-        thankYou: "Merci de votre participation!",
+        thankYou: "Merci!",
         answer1: "Vous avez répondu correctement à ",
         answer2: "% des essais."
     },
@@ -209,7 +209,7 @@ const pt = {
     },
     end:  {
         end: "Fim da tarefa.",
-        thankYou: "Muito obrigado pela sua participação!",
+        thankYou: "Muito obrigado!",
         answer1: "Você respondeu corretamente em ",
         answer2: "% das tentativas."
     },
