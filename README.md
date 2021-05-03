@@ -16,6 +16,8 @@ At the end of the task, a feedback about the overall accuracy is presented on th
  <li><strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, instructions or image-keyboard-response)</li>
  <li><strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)</li>
  <li><strong>time_elapsed:</strong> the time elapsed from the start of the script in ms</li>
+ <li><strong>subject:</strong> A 15-character long random subject ID for offline version, and customized subject number for offline version)</li>
+ <li><strong>session:</strong> customized session number (for offline version only))</li>
  <li><strong>internal_code_id:</strong> internal node id of the trial</li>
  <li><strong>browser_events:</strong> browser events during the task (fullscreenenter, fullscreenexit, blur or focus)</li>
  <li><strong>view_history:</strong> viewing history during the instruction trials</li>
@@ -36,6 +38,9 @@ At the end of the task, a feedback about the overall accuracy is presented on th
 In the <strong>parameters.js</strong> file you have the opportunity to slightly modify the task. By setting the variable <strong>numberOfRepetitions</strong>, you can modify how many times you want to include 20 trials for the task. The default is 8 (8×20 = 160).
 <br>
 You can also set the language of the task by modifying the varablei <strong>language</strong>. The currently available languages are enligsh (en) and hungarian (hu).
+
+<h2>How to start the task</h2>
+Open the <i>index.html</i> file in either the <i>offline</i> or <i>online</i> folder. When the offline version is started, you can customize the subject and session numbers (any number is accepted). If you start the offline version, a random subject ID will be allocated.
 
 <h2>Browser requirements</h2>
 Any browser except Safari and Internet Explorer.
