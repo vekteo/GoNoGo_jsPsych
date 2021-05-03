@@ -16,7 +16,7 @@ At the end of the task, a feedback about the overall accuracy is presented on th
  <li><strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, instructions or image-keyboard-response)</li>
  <li><strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)</li>
  <li><strong>time_elapsed:</strong> the time elapsed from the start of the script in ms</li>
- <li><strong>subject:</strong> A 15-character long random subject ID for offline version, and customized subject number for offline version)</li>
+ <li><strong>subject:</strong> A 15-character long random subject ID for the online version, and customized subject number for the offline version)</li>
  <li><strong>session:</strong> customized session number (for offline version only))</li>
  <li><strong>internal_code_id:</strong> internal node id of the trial</li>
  <li><strong>browser_events:</strong> browser events during the task (fullscreenenter, fullscreenexit, blur or focus)</li>
