@@ -9,7 +9,7 @@ const en = {
         pressSpace: "If you see a <strong>P</strong>, <strong>PRESS THE SPACEBAR</strong> as soon as you can.</p>",
         dontPress: "If you see an <strong>R</strong>, <strong>DO NOT PRESS</strong> the spacebar.",
         ready: "If you understand the instructions, click on <strong>Next</strong>!",
-        img: "static/images/instruction_en.gif"
+        img: "../static/images/instruction_en.gif"
     },
     practice: "If you are ready, press any key for a short practice!",
     task: {
@@ -29,7 +29,7 @@ const en = {
         change: "Now your task will change a little.",
         pressSpace: "From now on, if you see an <strong>R</strong>, <strong>PRESS THE SPACEBAR</strong> as soon as you can.",
         dontPress: "If you see an <strong>P</strong>, <strong>DO NOT PRESS</strong> the spacebar.",
-        img: "static/images/instruction2_en.gif"
+        img: "../static/images/instruction2_en.gif"
     },
     button: {
         next: "Next",
@@ -42,7 +42,17 @@ const en = {
     feedback: {
         correct: "Correct!",
         wrong: "Wrong!"
-    }
+    },
+    parameters: {
+        subject: "Subject Number:",
+        session: "Session Number:"
+    },
+    startWarning: {
+        startSubject: "You are about to start the task with<strong> Subject Number ",
+        startSession: "</strong> and <strong>Session Number ",
+        startButton: "Start the task!",
+        goBackButton: "Change the parameters"
+    },
 }
 
 
@@ -57,7 +67,7 @@ const hu = {
         pressSpace: "Ha <strong>P</strong> betűt látsz, <strong>NYOMD MEG A SZÓKÖZ GOMBOT</strong> amilyen gyorsan csak tudod!</p>",
         dontPress: "Ha  <strong>R</strong> betűt látsz, <strong>NE NYOMJ MEG SEMMILYEN GOMBOT</strong>.",
         ready: "Ha érthetőek az instrukciók, kattints a <strong>Tovább</strong> gombra a folytatáshoz!",
-        img: "static/images/instruction_hu.gif"
+        img: "../static/images/instruction_hu.gif"
     },
     practice: "Ha készen állsz, nyomd meg bármelyik gombot egy rövid gyakorláshoz!",
     task: {
@@ -77,7 +87,7 @@ const hu = {
         change: "Most egy kicsit megváltozik a feladatod.",
         pressSpace: "Mostantól, ha <strong>R</strong> betűt látsz, akkor <strong>NYOMD MEG A SZÓKÖZ GOMBOT</strong> amilyen gyorsan csak tudod!",
         dontPress: "Ha <strong>P</strong> betűt látsz, <strong>NE NYOMJ MEG SEMMILYEN GOMBOT</strong>.",
-        img: "static/images/instruction2_hu.gif"
+        img: "../static/images/instruction2_hu.gif"
     },
     button: {
         next: "Tovább",
@@ -90,7 +100,17 @@ const hu = {
     feedback: {
         correct: "Helyes!",
         wrong: "Helytelen!"
-    }
+    },
+    parameters: {
+        subject: "Vizsgálati személy száma: ",
+        session: "Ülés száma: "
+    },
+    startWarning: {
+        startSubject: "Feladat kezdése <strong> ezzel a vizsgálati személy számmal: ",
+        startSession: "</strong> és <strong>ezzel az ülésszámmal: ",
+        startButton: "Feladat kezdése",
+        goBackButton: "Paraméterek változtatása"
+    },
 }
 
 const es = {
@@ -104,7 +124,7 @@ const es = {
         pressSpace: "Si ves la letra <strong>P</strong>, <strong>PRESIONA LA BARRA ESPACIADORA</strong> lo más rápido que puedas.</p>",
         dontPress: "Si ves la letra <strong>R</strong>, <strong>NO PRESIONES</strong> la barra espaciadora.",
         ready: "Si comprendiste las instrucciones, haz clic en <strong>Siguiente</strong>!",
-        img: "static/images/instruction_en.gif"
+        img: "../static/images/instruction_en.gif"
     },
     practice: "Si estás listo, haz clic en cualquier tecla para empezar el entrenamiento!",
     task: {
@@ -124,7 +144,7 @@ const es = {
         change: "Ahora la tarea va a cambiar ligeramente.",
         pressSpace: "A partir de ahora, si ves una <strong>R</strong>, <strong>PRESIONA LA BARRA ESPACIADORA</strong> lo más rápido que puedas.",
         dontPress: "Si ves una <strong>P</strong>, <strong>NO PRESIONES</strong> la barra espaciadora.",
-        img: "static/images/instruction2_en.gif"
+        img: "../static/images/instruction2_en.gif"
     },
     button: {
         next: "Siguiente",
@@ -137,7 +157,17 @@ const es = {
     feedback: {
         correct: "Correcto!",
         wrong: "Incorrecto!"
-    }
+    },
+    parameters: {
+        subject: "Número de asunto: ",
+        session: "Número de sesión: "
+    },
+    startWarning: {
+        startSubject: "Está a punto de iniciar la tarea con <strong>Número de Asunto ",
+        startSession: "</strong> y <strong>Número de Sesión ",
+        startButton: "¡Inicia la tarea!",
+        goBackButton: "Cambiar los parámetros"
+    },
 }
 
 const fr = {
@@ -151,7 +181,7 @@ const fr = {
         pressSpace: "Si vous voyez un <strong>P</strong>, <strong>APPUYEZ SUR LA BARRE D'ESPACE</strong> aussi vite que vous le pouvez.</p>",
         dontPress: "Si vous voyez un <strong>R</strong>, <strong>N'APPUYEZ PAS</strong> sur la barre d'espace.",
         ready: "Si vous avez compris les instructions, cliquez sur <strong>SUIVANT</strong>!",
-        img: "static/images/instruction_en.gif"
+        img: "../static/images/instruction_en.gif"
     },
     practice: "Si vous êtes prêt, appuyez sur n'importe quelle touche du clavier pour démarrer un petit entraînement!",
     task: {
@@ -171,7 +201,7 @@ const fr = {
         change: "La tâche va changer un petit peu.",
         pressSpace: "Maintenant, si vous voyez un <strong>R</strong>, <strong>APPUYEZ SUR LA BARRE D'ESPACE</strong> aussi vite que possible.",
         dontPress: "Si vous voyez un <strong>P</strong>, <strong>N'APPUYEZ PAS</strong> sur la barre d'espace.",
-        img: "static/images/instruction2_en.gif"
+        img: "../static/images/instruction2_en.gif"
     },
     button: {
         next: "Suivant",
@@ -184,7 +214,17 @@ const fr = {
     feedback: {
         correct: "Correct!",
         wrong: "Faux!"
-    }
+    },
+    parameters: {
+        subject: "Numéro du sujet : ",
+        session: "Numéro de session : "
+    },
+    startWarning: {
+        startSubject: "Vous êtes sur le point de commencer la tâche avec <strong>Numéro de sujet ",
+        startSession: "</strong> et <strong>Numéro de session ",
+        startButton: "Commencez la tâche !",
+        goBackButton: "Modifier les paramètres"
+    },
 }
 
 const pt = {
@@ -198,7 +238,7 @@ const pt = {
         pressSpace: "Se você ver a letra <strong>P</strong>, <strong>APERTE A BARRA DE ESPAÇO</strong> o mais cedo que puder.</p>",
         dontPress: "Se você ver a letra <strong>R</strong>, <strong>NÃO APERTE</strong> a barra de espaço.",
         ready: "Se você entendeu as instruções, clique em <strong>Próximo</strong>!",
-        img: "static/images/instruction_en.gif"
+        img: "../static/images/instruction_en.gif"
     },
     practice: "Se estiver pronto, aperte qualquer tecla para um pequeno treino!",
     task: {
@@ -218,7 +258,7 @@ const pt = {
         change: "Agora sua tarefa vai mudar um pouco.",
         pressSpace: "De agora em diante, se você ver a letra <strong>R</strong>, <strong>APERTE A BARRA DE ESPAÇO</strong> o mais cedo que puder..",
         dontPress: "E se você ver a letra <strong>P</strong>, <strong>NÃO APERTE</strong> a barra de espaço.",
-        img: "static/images/instruction2_en.gif"
+        img: "../static/images/instruction2_en.gif"
     },
     button: {
         next: "Próximo",
@@ -231,5 +271,15 @@ const pt = {
     feedback: {
         correct: "Correto!",
         wrong: "Errado!"
-    }
+    },
+    parameters: {
+        subject: "Assunto número: ",
+        session: "Número da sessão: "
+    },
+    startWarning: {
+        startSubject: "Você está prestes a iniciar a tarefa com<strong> Número do assuntot ",
+        startSession: "</strong> e <strong>Sessão número ",
+        startButton: "Comece a tarefa!",
+        goBackButton: "Alterar os parâmetros"
+    },
 }
