@@ -1,4 +1,7 @@
 # GoNoGo_JSPsych
+
+<i>Created by the MEMO Team of Lyon Neuroscience Research Center (CRNL) (PI: Dezso Nemeth)</i>
+
 A Go/NoGo Task created with JSPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>., based on the implementation of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2757760/">Bezdjian et al. (2009)</a>.
 
 <h2>Structure of the Task</h2>
