@@ -1,49 +1,64 @@
-# GoNoGo_JSPsych
+# Go/No-Go Task (jsPsych)
 
-<i>Created by the MEMO Team of Lyon Neuroscience Research Center (CRNL) (PI: Dezso Nemeth)</i>
+This repository contains a Go/No-Go task. The task is implemented using [jsPsych](https://www.jspsych.org/) (de Leeuw, J. R., 2015) and is based on the design by Bezdjian et al. (2009).
 
-A Go/NoGo Task created with JSPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>., based on the implementation of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2757760/">Bezdjian et al. (2009)</a>.
+---
 
-<h2>Structure of the Task</h2>
-A grid of four squares appears on the screen. A blue star appears in each squares. From time to time, a <strong>P</strong> or an <strong>R</strong> letter appears in one of the four squares. In the first part of  the task, the task is to press the <strong>space</strong> button as soon as possible, when they see the letter P (Go). When an R appears, they do not have to press any button, i.e., they have to withhold their responses (No-Go). In the second part of the task, they have to press <strong>space</strong> when they see an R, and they have to withhold their responses when they see a P.
+## Task structure
 
-The task starts with a 20-trial practice session. Here, the user receives feedback whether their answer was correct. After that, the task begins, and the users don't receive feedback on their responses anymore. The first part consist of 160 trials. 128 of the 160 trials are Go-trials, and 32 of them are No-Go-trials. The ratio of the Go:No-Go trials are therefore 80:20. Each trial appears on the screen for 500 ms (or until response) with an interstimulus interval of 1500 ms.
+Participants view a grid of four squares, each containing a blue star. Throughout the task, either the letter **P** or **R** appears in one of these squares. 
 
-At the end of the first part, the new instructions are presented. After that, a 20-trial practice session starts again with feedback. Then the second part starts which contains again 160 trials with (80% of Go and 20% of No-Go responses).
+The task is divided into two main parts:
 
-At the end of the task, a feedback about the overall accuracy is presented on the screen, and the data are downloaded to the local machine in .csv format.
+1. **Part one:** Participants press the `space` bar as quickly as possible when they see the letter **P** (Go) and withhold their response when they see the letter **R** (No-Go).
+2. **Part two:** The rules reverse. Participants press `space` for the letter **R** (Go) and withhold their response for the letter **P** (No-Go).
 
-<h2>Output file</h2>
-<ul>
- <li><strong>success:</strong> whether fullscreen mode was successfully started/ended (true or false)</li>
- <li><strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, instructions or image-keyboard-response)</li>
- <li><strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)</li>
- <li><strong>time_elapsed:</strong> the time elapsed from the start of the script in ms</li>
- <li><strong>subject:</strong> A 15-character long random subject ID for the online version, and customized subject number for the offline version)</li>
- <li><strong>session:</strong> customized session number (for offline version only))</li>
- <li><strong>internal_code_id:</strong> internal node id of the trial</li>
- <li><strong>browser_events:</strong> browser events during the task (fullscreenenter, fullscreenexit, blur or focus)</li>
- <li><strong>view_history:</strong> viewing history during the instruction trials</li>
- <li><strong>rt:</strong> the reaction time for the Go or NoGo trials in ms</li>
- <li><strong>stimulus:</strong> stimulus on the screen in HTML</li>
- <li><strong>key_press:</strong> number code of the key pressed</li>
- <li><strong>RorP:</strong> whether the stimulus presented were P or R</li>
- <li><strong>GoNoGo:</strong> whether the stimlus presented required Go or NoGo response</li>
- <li><strong>position:</strong> the position of the stimulus (1: top left, 2: top right, 3: bottom left, 4: bottom right)</li>
- <li><strong>correct_key:</strong> the key that should be pressed (32 for space, null for no keypress)</li>
- <li><strong>is_practice:</strong> whether the stimulus is presented as a practice stimulus (1 - yes, 0 - no)</li>
- <li><strong>goLetter:</strong> the letter which requires Go response in the current part of the task</li>
- <li><strong>trial_number:</strong> the trial number within the given part (1-20 for the practice trials, 1-160 for the two parts)</li>
- <li><strong>correct:</strong> whether or not correct responses were given (1 - correct, 0 - incorrect)
- </ul>
+### Trial details
+Each part begins with a 20-trial practice session featuring accuracy feedback. The main task for each part consists of 160 trials with an 80:20 ratio of Go to No-Go stimuli. Each stimulus is displayed for 500 ms (or until response) with an Inter-Stimulus Interval (ISI) of 1500 ms. At the conclusion of the task, overall accuracy is displayed and data is automatically downloaded in `.csv` format.
 
-<h2>Setting options</h2>
-In the <strong>parameters.js</strong> file you have the opportunity to slightly modify the task. By setting the variable <strong>numberOfRepetitions</strong>, you can modify how many times you want to include 20 trials for the task. The default is 8 (8×20 = 160).
-<br>
-You can also set the language of the task by modifying the varablei <strong>language</strong>. The currently available languages are enligsh (en) and hungarian (hu).
+---
 
-<h2>How to start the task</h2>
-Open the <i>index.html</i> file in either the <i>offline</i> or <i>online</i> folder. When the offline version is started, you can customize the subject and session numbers (any number is accepted). If you start the offline version, a random subject ID will be allocated.
+## Output data fields
 
-<h2>Browser requirements</h2>
-Any browser except Safari and Internet Explorer.
+The generated `.csv` file includes the following columns:
+
+| Variable | Description |
+| :--- | :--- |
+| **success** | Boolean indicating if fullscreen mode was successfully toggled. |
+| **trial_type** | The jsPsych trial type (e.g., `fullscreen`, `instructions`). |
+| **trial_index** | Cumulative index of all task events and instructions. |
+| **time_elapsed** | Total time elapsed since the script started (ms). |
+| **subject** | Random 15-character ID (online) or a customized number (offline). |
+| **session** | Customized session number (offline version only). |
+| **internal_code_id** | The internal node ID of the specific trial. |
+| **browser_events** | Logs of events like `fullscreenenter`, `fullscreenexit`, or `blur`. |
+| **view_history** | Viewing duration for the instruction screens. |
+| **rt** | Reaction time in milliseconds. |
+| **stimulus** | The HTML representation of the stimulus presented. |
+| **key_press** | The numeric code of the key pressed. |
+| **RorP** | Indicates which letter was displayed (**P** or **R**). |
+| **GoNoGo** | Label for the required response type. |
+| **position** | Stimulus location (1: top-left, 2: top-right, 3: bottom-left, 4: bottom-right). |
+| **correct_key** | The required key code (32 for `space`, null for No-Go). |
+| **is_practice** | 1 if the trial was practice, 0 if it was the main task. |
+| **goLetter** | Identifies the target letter for the current task block. |
+| **trial_number** | The trial count within the current block (1–20 or 1–160). |
+| **correct** | 1 if the response was correct, 0 if incorrect. |
+
+---
+
+## Configuration
+
+The `parameters.js` file allows for the following modifications:
+
+1. **numberOfRepetitions:** Adjusts the number of 20-trial blocks. The default is `8` (resulting in 160 trials per part).
+2. **language:** Set the task language to English (`en`) or Hungarian (`hu`).
+
+---
+
+## Getting started
+
+To run the task, open the `index.html` file in either the `offline` or `online` folder. The offline version allows you to manually input subject and session numbers, while the online version generates a random subject ID. 
+
+### Browser requirements
+The task is compatible with most modern browsers. Please note that **Safari** and **Internet Explorer** are not supported.
